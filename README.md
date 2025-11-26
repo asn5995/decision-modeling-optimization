@@ -1,8 +1,46 @@
-This repository contains self-directed projects from NYU Stern’s Decision Models & Analytics course, completed as part of my MBA.
+This repository contains self-directed projects from NYU Stern's Decision Models & Analytics course, completed as part of my MBA.
 Each case applies optimization and simulation techniques to solve real-world business problems using Python.
 
 ⚙️ Dependencies
 pip install pulp numpy pandas
+
+💰 Case 4 — Cash Matching Optimization (Web Application)
+
+**Objective:**
+Determine the minimum-cost portfolio of bonds that will meet all project cash flow requirements exactly.
+
+**Model Type:**
+Linear Programming (LP)
+
+**Features:**
+- Interactive web interface built with Streamlit
+- Input cash requirements (dates and amounts)
+- Input bond data (maturity, coupon rate, price)
+- Automatic optimization using linear programming
+- Cash flow analysis with reinvestment of excess cash
+- Downloadable results
+
+**How to Run:**
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Launch the web application:
+```bash
+streamlit run app.py
+```
+
+3. The application will open in your default web browser. Use the tabs to:
+   - **Cash Requirements**: Enter dates and cash amounts needed
+   - **Bonds**: Enter available bonds with maturity, coupon rate, and price
+   - **Results**: Click "Run Optimization" to solve and view results
+
+**Key Parameters:**
+- Bonds can be purchased fractionally
+- Excess cash can be reinvested at a configurable rate (default: 4% annual, 2% semiannual)
+- The optimization minimizes the upfront cost while meeting all cash flow requirements
 
 🧱 Case 1 — Production Mix Optimization
 
